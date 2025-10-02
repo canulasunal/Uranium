@@ -1,0 +1,17 @@
+include math
+
+function math.square(number) {
+    return $number * $number
+}
+
+function math.cube(number) {
+    return $number * $number * $number
+}
+
+function math.area.circle(radius) {
+    return math.pi() * $radius * $radius
+}
+
+function math.area.rectangle(radius) {
+    return $radius * $radius
+}

@@ -1,0 +1,6 @@
+function repl.launch() {
+    while 10 > 1 {
+        var command = prompt(">>> ")
+        exec($command)
+    }
+}
