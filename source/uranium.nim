@@ -95,6 +95,9 @@ let command = paramStr(1)
 
 if command == "--version" or command == "-V":
     echo "Uranium Runtime Version " & version()
+    echo "-------------------------------"
+    echo ""
+    echo "Made by canulasunal."
 
 elif command == "-c":
     var argument: seq[string] = @[]
