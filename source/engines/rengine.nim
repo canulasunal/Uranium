@@ -46,7 +46,7 @@ proc find_char*(text: string, character: string): seq[string] =
 
         strings[x] = item.join()
 
-    return 
+    return strings
 
 proc find_par*(text: string): seq[string] =
 
