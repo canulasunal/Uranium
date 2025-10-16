@@ -124,7 +124,7 @@ proc interpret*(codeContent: string): string =
                     indentation += 1
 
             var indent = $(indentation)
-            var statement = command.replace(":*#$?!>-+ ", "").replace("\'", "\"").strip()
+            var statement = command.replace(":*#$?!>-+ ", "").replace("\'", "\"").strip().split("//")[0]
 
             if oslib_imported == true:
                 statement = oslib.refresh(statement)
@@ -363,7 +363,7 @@ proc interpret*(codeContent: string): string =
             elif statement.startsWith("print"):
                 var newline = false
 
-                if statement.startsWith("println(") and statement.endsWith(")"):
+                if statement.startsWith("println(") and statement.strip().endsWith(")"):
                     newline = true
                 
                 elif statement.startsWith("print(") and statement.endsWith(")"):
