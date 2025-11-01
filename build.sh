@@ -2,13 +2,18 @@
 
 set -e
 
-if command -v nim; then
-    echo "Nim Compiler Installed On System"
-    echo "Proceeding to compile"
+echo "Checking for GCC"
+if command -v gcc; then
+    sleep 0
 else
-    echo "Error: The Nim language compiler is not installed on this system"
-    echo "Error: Please install it from nim-lang.org to continue"
-    exit
+    echo "Dependency Error: GCC not found on system."
+fi
+
+echo "Checking for Nim-Lang"
+if command -v nim; then
+    sleep 0
+else
+    echo "Dependency Error: Nim-Lang not found on system."
 fi
 
 cd source
